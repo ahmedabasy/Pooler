@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @carpooling.name %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @carpooling.telephone %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @carpooling.age %>
+</p>
+
+<p>
+  <strong>Location selection:</strong>
+  <%= @carpooling.location_selection %>
+</p>
+
+<p>
+  <strong>Destination location:</strong>
+  <%= @carpooling.destination_location %>
+</p>
+
+<p>
+  <strong>Travel date:</strong>
+  <%= @carpooling.travel_date %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @carpooling.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @carpooling.to %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @carpooling.notes %>
+</p>
+
+<%= link_to 'Edit', edit_carpooling_path(@carpooling) %> |
+<%= link_to 'Back', carpoolings_path %>

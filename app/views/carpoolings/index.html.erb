@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Carpoolings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Telephone</th>
+      <th>Age</th>
+      <th>Location selection</th>
+      <th>Destination location</th>
+      <th>Travel date</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @carpoolings.each do |carpooling| %>
+      <tr>
+        <td><%= carpooling.name %></td>
+        <td><%= carpooling.telephone %></td>
+        <td><%= carpooling.age %></td>
+        <td><%= carpooling.location_selection %></td>
+        <td><%= carpooling.destination_location %></td>
+        <td><%= carpooling.travel_date %></td>
+        <td><%= carpooling.from %></td>
+        <td><%= carpooling.to %></td>
+        <td><%= carpooling.notes %></td>
+        <td><%= link_to 'Show', carpooling %></td>
+        <td><%= link_to 'Edit', edit_carpooling_path(carpooling) %></td>
+        <td><%= link_to 'Destroy', carpooling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Carpooling', new_carpooling_path %>

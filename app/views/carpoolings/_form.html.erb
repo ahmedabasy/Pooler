@@ -1,0 +1,53 @@
+<%= form_for(@carpooling) do |f| %>
+  <% if @carpooling.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@carpooling.errors.count, "error") %> prohibited this carpooling from being saved:</h2>
+
+      <ul>
+      <% @carpooling.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :telephone %><br>
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :location_selection %><br>
+    <%= f.text_field :location_selection %>
+  </div>
+  <div class="field">
+    <%= f.label :destination_location %><br>
+    <%= f.text_field :destination_location %>
+  </div>
+  <div class="field">
+    <%= f.label :travel_date %><br>
+    <%= f.date_select :travel_date %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.time_select :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.time_select :to %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
